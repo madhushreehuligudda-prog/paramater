@@ -1,16 +1,13 @@
 import sys
-def add(x, y):
-    return x + y
+
+def add(a, b):
+    return a + b
 
 if __name__ == "__main__":
-    if len(sys.argv)==3:
-
-    script_name = sys.argv[0]
-    a = int(sys.argv[1])
-    b = int(sys.argv[2])
-else:
-    script_name = sys.argv[0]
-    x = 10
-    y = 78
-
-    print("sum:",result)
+    if len(sys.argv) != 3:
+        print("Usage: python script.py <num1> <num2>")
+        sys.exit(1)
+    
+    x = int(sys.argv[1])
+    y = int(sys.argv[2])
+    print("Sum:", add(x, y))
